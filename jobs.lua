@@ -84,8 +84,14 @@ TEAM_IMPERIALS = DarkRP.createJob("Imperial Foot Soldier", {
     https://yourdevtools.com/gmod/darkrp-job
 --]]
 
+--[[
+    Assassin Job
+    Generated using: DarkRP | Job Generator
+    https://yourdevtools.com/gmod/darkrp-job
+--]]
+
 TEAM_HITMAN = DarkRP.createJob("Assassin", {
-    color = Color(0, 0, 0),
+    color = Color(194, 0, 0),
     model = "models/koz/lotr/nazgul/nazgul.mdl",
     description = [[Accept money in exchange for assassinating other players. Don't get caught by the guards!]],
     weapons = {
@@ -107,7 +113,6 @@ TEAM_HITMAN = DarkRP.createJob("Assassin", {
         ply:SetArmor(0)
         ply:SetMaxArmor(0)
     end,
-    NeedToChangeFrom = TEAM_POLICE,
 })
 
 --[[---------------------------------------------------------------------------
