@@ -11,3 +11,10 @@ AddDoorGroup("NAME OF THE GROUP HERE, you will see this when looking at a door",
 
 -- Example: AddDoorGroup("Cops and Mayor only", TEAM_CHIEF, TEAM_POLICE, TEAM_MAYOR)
 -- Example: AddDoorGroup("Gundealer only", TEAM_GUN)
+--[[
+    Imperials - Door Group
+    Generated using: DarkRP | Door Group Generator
+    https://yourdevtools.com/gmod/darkrp-doorgroup
+--]]
+
+DarkRP.createEntityGroup("Imperials", TEAM_IMPERIAL)

@@ -28,3 +28,49 @@ DarkRP.createCategory{
     canSee = function(ply) return true end, -- OPTIONAL: whether the player can see this category AND EVERYTHING IN IT.
     sortOrder = 100, -- OPTIONAL: With this you can decide where your category is. Low numbers to put it on top, high numbers to put it on the bottom. It's 100 by default.
 }
+--[[
+    Imperials - Category
+    Generated using: DarkRP | Category Generator
+    https://yourdevtools.com/gmod/darkrp-category
+--]]
+DarkRP.createCategory {
+    name = "Imperials",
+    categorises = "jobs",
+    startExpanded = false,
+    color = Color(255, 0, 0),
+    sortOrder = 2,
+    canSee = function(ply) 
+         return true 
+    end,
+}
+--[[
+    Rebels - Category
+    Generated using: DarkRP | Category Generator
+    https://yourdevtools.com/gmod/darkrp-category
+--]]
+DarkRP.createCategory {
+    name = "Rebels",
+    categorises = "jobs",
+    startExpanded = false,
+    color = Color(0, 0, 255),
+    sortOrder = 3,
+    canSee = function(ply) 
+         return true 
+    end,
+}
+--[[
+    Arrows - Category
+    Generated using: DarkRP | Category Generator
+    https://yourdevtools.com/gmod/darkrp-category
+--]]
+DarkRP.createCategory {
+    name = "Arrows",
+    categorises = "ammo",
+    startExpanded = false,
+    color = Color(0, 0, 0),
+    sortOrder = 1,
+    canSee = function(ply) 
+         return true 
+    end,
+}
+
