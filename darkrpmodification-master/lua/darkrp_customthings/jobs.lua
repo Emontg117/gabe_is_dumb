@@ -252,7 +252,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial Foot Soldier", {
     category = "Imperials",
     canDemote = false,
 
-})
+
 })
 --[[
     Assassin Job
