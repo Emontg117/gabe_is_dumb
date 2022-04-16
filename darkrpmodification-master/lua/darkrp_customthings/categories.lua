@@ -24,7 +24,7 @@ DarkRP.createCategory {
     name = "Staff",
     categorises = "jobs",
     startExpanded = false,
-    color = Color(255, 0, 0),
+    color = Color(255, 255, 255),
     sortOrder = 100,
     canSee = function(ply) 
          return true 
