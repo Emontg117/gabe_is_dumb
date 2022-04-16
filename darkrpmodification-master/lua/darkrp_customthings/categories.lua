@@ -20,6 +20,16 @@ DarkRP.createCategory{
 
 Add new categories under the next line!
 ---------------------------------------------------------------------------]]
+DarkRP.createCategory {
+    name = "Staff",
+    categorises = "jobs",
+    startExpanded = false,
+    color = Color(255, 0, 0),
+    sortOrder = 100,
+    canSee = function(ply) 
+         return true 
+    end,
+}
 DarkRP.createCategory{
     name = "ShortSwords", -- The name of the category.
     categorises = "shipments", -- What it categorises. MUST be one of "jobs", "entities", "shipments", "weapons", "vehicles", "ammo".

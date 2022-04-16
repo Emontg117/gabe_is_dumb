@@ -16,6 +16,31 @@ https://darkrp.miraheze.org/wiki/DarkRP:CustomJobFields
 Add your custom jobs under the following line:
 ---------------------------------------------------------------------------]]
 
+--[[
+    Staff On Duty Job
+    Generated using: DarkRP | Job Generator
+    https://yourdevtools.com/gmod/darkrp-job
+--]]
+
+TEAM_STAFF = DarkRP.createJob("Staff On Duty", {
+    color = Color(0, 0, 0),
+    model = "models/player/combine_super_soldier.mdl",
+    description = [[If we're here you fucked up]],
+    weapons = {},
+    command = "onduty",
+    max = 4,
+    salary = 45,
+    admin = 1,
+    vote = false,
+    hasLicense = false,
+    category = "Staff",
+    canDemote = false,
+    customCheck = function(ply) 
+        return table.HasValue({"admin", "operator", "superadmin", "Owner"}, ply:GetUserGroup()) 
+    end,
+    CustomCheckFailMsg = "This job is Staff only!",
+})
+
 TEAM_GUN = DarkRP.createJob("Blacksmith", {
     color = Color(255, 140, 0, 255),
     model = "models/player/tfa_tw3/gaetan.mdl",
