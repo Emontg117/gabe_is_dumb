@@ -22,20 +22,3 @@ Add shipments and guns under the following line:
   Generated using: DarkRP | Shipment Generator
   https://yourdevtools.com/gmod/darkrp-shipment
 --]]
-
-DarkRP.createShipment("Iron Shortsword", {
-    entity = "weapon_mor_iron_shortsword",
-    model = "models/morrowind/iron/shortsword/w_iron_shortsword.mdl",
-    amount = 10,
-    price = 1000,
-    pricesep = 150,
-    noship = false,
-    separate = true,
-    category = "ShortSwords",
-    allowed = {
-        TEAM_GUN
-    },
-    customCheck = function(ply) 
-        return table.HasValue({TEAM_GUN}, ply:Team()) 
-    end,
-})

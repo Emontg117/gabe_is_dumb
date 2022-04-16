@@ -57,9 +57,7 @@ TEAM_CHIEF = DarkRP.createJob("Town Captain", {
     description = [[You are the captain of the town. Lead the guards and enforce the laws set in place by the lord!]],
     weapons = {
         "weapon_mfrp_lantern",
-        "towerkiteshield",
-        "meleearts_blade_sunlightone",
-        "nathaantfm_door_ram"
+        "meleearts_blade_sunlightone"
     },
     command = "guardcapt",
     max = 1,
@@ -105,8 +103,6 @@ TEAM_POLICE = DarkRP.createJob("Town Guard", {
     weapons = {
         "weapon_mfrp_lantern",
         "meleearts_blade_shortswordone",
-        "towerkiteshield",
-        "nathaantfm_door_ram"
     },
     command = "guard",
     max = 4,
@@ -166,6 +162,7 @@ TEAM_CITIZEN = DarkRP.createJob("Innkeeper", {
     salary = 60,
     admin = 0,
     vote = false,
+    cook = true,
     hasLicense = false,
     category = "Citizens",
     canDemote = true,
@@ -262,15 +259,13 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial Foot Soldier", {
     https://yourdevtools.com/gmod/darkrp-job
 --]]
 
-TEAM_HITMAN = DarkRP.createJob("Assassin", {
+TEAM_ASSASSIN = DarkRP.createJob("Assassin", {
     color = Color(194, 0, 0),
     model = "models/koz/lotr/nazgul/nazgul.mdl",
     description = [[Accept money in exchange for assassinating other players. Don't get caught by the guards!]],
     weapons = {
         "weapon_huntingbow",
         "meleearts_blade_knifeone",
-        "huntingbow_quiver",
-        "huntingbow_quiver",
         "climb_swep2"
     },
     command = "assassin",
@@ -281,7 +276,9 @@ TEAM_HITMAN = DarkRP.createJob("Assassin", {
     hasLicense = false,
     category = "Citizens",
     canDemote = true,
-    level = 10,
+    ammo = {
+        ["arrows"] = 20,
+    },
     PlayerSpawn = function(ply)
         ply:SetHealth(100)
         ply:SetMaxHealth(100)
@@ -301,8 +298,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial Archer", {
     description = [[“Arrow! Black arrow! I have saved you to the last."]],
     weapons = {
         "weapon_huntingbow",
-        "huntingbow_quiver",
-        "huntingbow_quiver",
+        "meleearts_blade_shortswordone",
         "weapon_mfrp_lantern"
     },
     command = "imperialarcher",
@@ -313,6 +309,9 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial Archer", {
     hasLicense = true,
     category = "Imperials",
     canDemote = false,
+    ammo = {
+        ["arrows"] = 20,
+    },
     level = 3,
 })
 --[[
@@ -376,7 +375,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial General", {
     https://yourdevtools.com/gmod/darkrp-job
 --]]
 
-TEAM_IMPERIAL = DarkRP.createJob("King", {
+TEAM_KING = DarkRP.createJob("King", {
     color = Color(165, 7, 3),
     model = "models/koz/lotr/aragorn/aragorn.mdl",
     description = [[Lead your Empire to glory!]],
@@ -487,12 +486,15 @@ TEAM_IMPERIAL = DarkRP.createJob("Royal Guard", {
     },
     command = "royalguard",
     max = 3,
-    salary = 1600,
+    salary = 800,
     admin = 0,
     vote = false,
     hasLicense = true,
     category = "Imperials",
     canDemote = false,
+    ammo = {
+        ["xbowbolt"] = 20,
+    },
     PlayerSpawn = function(ply)
         ply:SetHealth(135)
         ply:SetMaxHealth(135)
@@ -528,7 +530,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Royal Mage", {
     },
     command = "royalmage",
     max = 2,
-    salary = 1800,
+    salary = 1000,
     admin = 0,
     vote = false,
     hasLicense = true,
@@ -562,7 +564,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Royal Knight", {
     },
     command = "royalknight",
     max = 2,
-    salary = 2000,
+    salary = 1400,
     admin = 0,
     vote = false,
     hasLicense = true,
@@ -596,4 +598,4 @@ GAMEMODE.CivilProtection = {
 --[[---------------------------------------------------------------------------
 Jobs that are hitmen (enables the hitman menu)
 ---------------------------------------------------------------------------]]
-DarkRP.addHitmanTeam(TEAM_MOB)
+DarkRP.addHitmanTeam(TEAM_ASSASSIN)

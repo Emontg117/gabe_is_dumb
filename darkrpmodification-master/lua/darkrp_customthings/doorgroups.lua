@@ -17,4 +17,5 @@ AddDoorGroup("NAME OF THE GROUP HERE, you will see this when looking at a door",
     https://yourdevtools.com/gmod/darkrp-doorgroup
 --]]
 
-DarkRP.createEntityGroup("Imperials", TEAM_IMPERIAL)
+AddDoorGroup("Imperials", TEAM_IMPERIAL)
+AddDoorGroup("Guards", TEAM_POLICE, TEAM_CHIEF, TEAM_MAYOR)
