@@ -79,10 +79,10 @@ DarkRP.disabledDefaults["shipments"] = {
 Entities
 ---------------------------------------------------------------------------]]
 DarkRP.disabledDefaults["entities"] = {
-    ["Drug lab"]      = false,
-    ["Gun lab"]       = false,
-    ["Money printer"] = false,
-    ["Microwave"]     = false, --Hungermod only
+    ["Drug lab"]      = true,
+    ["Gun lab"]       = true,
+    ["Money printer"] = true,
+    ["Microwave"]     = true, --Hungermod only
     ["Tip Jar"]       = false,
 }
 
@@ -100,25 +100,25 @@ Food
 Food is only enabled when hungermod is enabled (see disabled modules above).
 ---------------------------------------------------------------------------]]
 DarkRP.disabledDefaults["food"] = {
-    ["Banana"]           = false,
-    ["Bunch of bananas"] = false,
-    ["Melon"]            = false,
-    ["Glass bottle"]     = false,
-    ["Pop can"]          = false,
-    ["Plastic bottle"]   = false,
-    ["Milk"]             = false,
-    ["Bottle 1"]         = false,
-    ["Bottle 2"]         = false,
-    ["Bottle 3"]         = false,
-    ["Orange"]           = false,
+    ["Banana"]           = true,
+    ["Bunch of bananas"] = true,
+    ["Melon"]            = true,
+    ["Glass bottle"]     = true,
+    ["Pop can"]          = true,
+    ["Plastic bottle"]   = true,
+    ["Milk"]             = true,
+    ["Bottle 1"]         = true,
+    ["Bottle 2"]         = true,
+    ["Bottle 3"]         = true,
+    ["Orange"]           = true,
 }
 
 --[[---------------------------------------------------------------------------
 Door groups
 ---------------------------------------------------------------------------]]
 DarkRP.disabledDefaults["doorgroups"] = {
-    ["Cops and Mayor only"] = false,
-    ["Gundealer only"]      = false,
+    ["Cops and Mayor only"] = true,
+    ["Gundealer only"]      = true,
 }
 
 
@@ -144,9 +144,9 @@ Chat groups (chat with /g)
 Chat groups do not have names, so their index is used instead.
 ---------------------------------------------------------------------------]]
 DarkRP.disabledDefaults["groupchat"] = {
-    [1] = false, -- Police group chat (mayor, cp, chief and/or your custom CP teams)
-    [2] = false, -- Group chat between gangsters and the mobboss
-    [3] = false, -- Group chat between people of the same team
+    [1] = true, -- Police group chat (mayor, cp, chief and/or your custom CP teams)
+    [2] = true, -- Group chat between gangsters and the mobboss
+    [3] = true, -- Group chat between people of the same team
 }
 
 --[[---------------------------------------------------------------------------
@@ -154,7 +154,7 @@ Jobs that are hitmen
 set to true to disable
 ---------------------------------------------------------------------------]]
 DarkRP.disabledDefaults["hitmen"] = {
-    ["mobboss"] = false,
+    ["mobboss"] = true,
 }
 
 --[[---------------------------------------------------------------------------
