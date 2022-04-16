@@ -17,11 +17,56 @@ Add your custom jobs under the following line:
 ---------------------------------------------------------------------------]]
 
 --[[
+    Bandit Job
+    Generated using: DarkRP | Job Generator
+    https://yourdevtools.com/gmod/darkrp-job
+--]]
+TEAM_CITIZEN = DarkRP.createJob("Bandit", {
+    color = Color(0, 0, 0),
+    model = "models/player/tfa_tw3/iorveth.mdl",
+    description = [[Rob, mug, and terrorize the citizens of your local village! Make sure the guards don't catch you!]],
+    weapons = {
+        "weapon_mfrp_lantern",
+        "lockpick"
+    },
+    command = "bandit",
+    max = 5,
+    salary = 45,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    category = "Citizens",
+    canDemote = false,
+})
+
+--[[
+    Innkeeper Job
+    Generated using: DarkRP | Job Generator
+    https://yourdevtools.com/gmod/darkrp-job
+--]]
+TEAM_CITIZEN = DarkRP.createJob("Innkeeper", {
+    color = Color(0, 0, 0),
+    model = "models/models/gared/gared.mdl",
+    description = [[Treat guests to clean rooms and luxurious food!]],
+    weapons = {
+        "weapon_mfrp_lantern",
+        "rpgguitar"
+    },
+    command = "inn",
+    max = 2,
+    salary = 45,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    category = "Citizens",
+    canDemote = true,
+})
+
+--[[
     Staff On Duty Job
     Generated using: DarkRP | Job Generator
     https://yourdevtools.com/gmod/darkrp-job
 --]]
-
 TEAM_STAFF = DarkRP.createJob("Staff On Duty", {
     color = Color(0, 0, 0),
     model = "models/player/combine_super_soldier.mdl",
@@ -45,7 +90,7 @@ TEAM_GUN = DarkRP.createJob("Blacksmith", {
     color = Color(255, 140, 0, 255),
     model = "models/player/tfa_tw3/gaetan.mdl",
     description = [[A Blacksmith is the only person who can sell swords to other people.]],
-    weapons = {},
+    weapons = {"weapon_mfrp_lantern"},
     command = "blacksmith",
     max = 2,
     salary = GAMEMODE.Config.normalsalary,
@@ -65,8 +110,8 @@ TEAM_CITIZEN = DarkRP.createJob("Peasant", {
         "models/player/martin/camprouge/recruerouge05.mdl",
         "models/player/martin/camprouge/recruerouge06.mdl"
     },
-    description = [[The Peasent is the most basic level of society you can hold besides being a hobo. You have no specific role in city life.]],
-    weapons = {},
+    description = [[The Peasant is the most basic level of society you can hold besides being a hobo. You have no specific role in city life.]],
+    weapons = {"weapon_mfrp_lantern"},
     command = "peasant",
     max = 0,
     salary = GAMEMODE.Config.normalsalary,
@@ -81,8 +126,7 @@ TEAM_CITIZEN = DarkRP.createJob("Peasant", {
     Generated using: DarkRP | Job Generator
     https://yourdevtools.com/gmod/darkrp-job
 --]]
- //Imperials 
-TEAM_IMPERIALS = DarkRP.createJob("Imperial Foot Soldier", {
+TEAM_IMPERIAL = DarkRP.createJob("Imperial Foot Soldier", {
     color = Color(233, 22, 28),
     model = {
         "models/player/martin/camprouge/fantassinrouge02.mdl",
