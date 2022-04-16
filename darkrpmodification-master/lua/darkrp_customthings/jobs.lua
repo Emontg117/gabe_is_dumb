@@ -17,6 +17,115 @@ Add your custom jobs under the following line:
 ---------------------------------------------------------------------------]]
 
 --[[
+    Lord Job
+    Generated using: DarkRP | Job Generator
+    https://yourdevtools.com/gmod/darkrp-job
+--]]
+TEAM_MAYOR = DarkRP.createJob("Lord", {
+    color = Color(51, 0, 255),
+    model = "models/player/tfa_tw3/emhyr.mdl",
+    description = [[You are the lord of the town. Create the laws, influence your citizens, and make your town something great!]],
+    weapons = {
+        "weapon_mfrp_lantern",
+        "meleearts_blade_estocone"
+    },
+    command = "lord",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = true,
+    hasLicense = true,
+    category = "Guards",
+    canDemote = false,
+    level = 10,
+    mayor = true,
+    PlayerDeath = function(ply, weapon, killer)
+        ply:TeamBan()
+        ply:changeTeam(GAMEMODE.DefaultTeam, true)
+        DarkRP.notifyAll(0, 4, "The lord has been slain") 
+    end,
+})
+
+--[[
+    Town Captain Job
+    Generated using: DarkRP | Job Generator
+    https://yourdevtools.com/gmod/darkrp-job
+--]]
+TEAM_CHIEF = DarkRP.createJob("Town Captain", {
+    color = Color(51, 0, 255),
+    model = "models/player/dovahkiin.mdl",
+    description = [[You are the captain of the town. Lead the guards and enforce the laws set in place by the lord!]],
+    weapons = {
+        "weapon_mfrp_lantern",
+        "towerkiteshield",
+        "meleearts_blade_sunlightone",
+        "nathaantfm_door_ram"
+    },
+    command = "guardcapt",
+    max = 1,
+    salary = 80,
+    admin = 0,
+    vote = true,
+    hasLicense = true,
+    category = "Guards",
+    canDemote = true,
+    level = 8,
+    chief = true,
+    PlayerSpawn = function(ply)
+        ply:SetHealth(150)
+        ply:SetMaxHealth(150)
+        ply:SetArmor(100)
+        ply:SetMaxArmor(100)
+    end,
+    PlayerDeath = function(ply, weapon, killer)
+        ply:TeamBan()
+        ply:changeTeam(GAMEMODE.DefaultTeam, true)
+        DarkRP.notifyAll(0, 4, "The Town Captain has been slain") 
+    end,
+})
+
+--[[
+    Town Guard Job
+    Generated using: DarkRP | Job Generator
+    https://yourdevtools.com/gmod/darkrp-job
+--]]
+TEAM_POLICE = DarkRP.createJob("Town Guard", {
+    color = Color(51, 0, 255),
+    model = {
+        "models/player/guard_falkreath.mdl",
+        "models/player/guard_dawnstar.mdl",
+        "models/player/guard_hjaalmarch.mdl",
+        "models/player/guard_markarth.mdl",
+        "models/player/guard_riften.mdl",
+        "models/player/guard_solitude.mdl",
+        "models/player/guard_whiterun.mdl",
+        "models/player/guard_winterhold.mdl"
+    },
+    description = [[You are a guard of the town. Help out the citizens, arrest the criminals, and listen to the orders of your Captain.]],
+    weapons = {
+        "weapon_mfrp_lantern",
+        "meleearts_blade_shortswordone",
+        "towerkiteshield",
+        "nathaantfm_door_ram"
+    },
+    command = "guard",
+    max = 4,
+    salary = 65,
+    admin = 0,
+    vote = false,
+    hasLicense = true,
+    category = "Guards",
+    canDemote = true,
+    level = 3,
+    PlayerSpawn = function(ply)
+        ply:SetHealth(100)
+        ply:SetMaxHealth(100)
+        ply:SetArmor(50)
+        ply:SetMaxArmor(100)
+    end,
+})
+
+--[[
     Bandit Job
     Generated using: DarkRP | Job Generator
     https://yourdevtools.com/gmod/darkrp-job
@@ -54,7 +163,7 @@ TEAM_CITIZEN = DarkRP.createJob("Innkeeper", {
     },
     command = "inn",
     max = 2,
-    salary = 45,
+    salary = 60,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -74,7 +183,7 @@ TEAM_STAFF = DarkRP.createJob("Staff On Duty", {
     weapons = {},
     command = "onduty",
     max = 0,
-    salary = 45,
+    salary = 0,
     admin = 1,
     vote = false,
     hasLicense = false,
@@ -92,8 +201,8 @@ TEAM_GUN = DarkRP.createJob("Blacksmith", {
     description = [[A Blacksmith is the only person who can sell swords to other people.]],
     weapons = {"weapon_mfrp_lantern"},
     command = "blacksmith",
-    max = 2,
-    salary = GAMEMODE.Config.normalsalary,
+    max = 3,
+    salary = 60,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -114,7 +223,7 @@ TEAM_CITIZEN = DarkRP.createJob("Peasant", {
     weapons = {"weapon_mfrp_lantern"},
     command = "peasant",
     max = 0,
-    salary = GAMEMODE.Config.normalsalary,
+    salary = 45,
     admin = 0,
     vote = false,
     hasLicense = false,
@@ -141,7 +250,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial Foot Soldier", {
     salary = 65,
     admin = 0,
     vote = false,
-    hasLicense = false,
+    hasLicense = true,
     category = "Imperials",
     canDemote = false,
 
@@ -201,7 +310,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial Archer", {
     salary = 85,
     admin = 0,
     vote = false,
-    hasLicense = false,
+    hasLicense = true,
     category = "Imperials",
     canDemote = false,
     level = 3,
@@ -226,7 +335,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial Captain", {
     salary = 95,
     admin = 0,
     vote = false,
-    hasLicense = false,
+    hasLicense = true,
     category = "Imperials",
     canDemote = false,
     level = 12,
@@ -251,7 +360,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial General", {
     salary = 105,
     admin = 0,
     vote = true,
-    hasLicense = false,
+    hasLicense = true,
     category = "Imperials",
     canDemote = false,
     level = 18,
@@ -278,10 +387,10 @@ TEAM_IMPERIAL = DarkRP.createJob("King", {
     },
     command = "king",
     max = 1,
-    salary = 1200,
+    salary = 600,
     admin = 0,
     vote = true,
-    hasLicense = false,
+    hasLicense = true,
     category = "Imperials",
     canDemote = false,
     level = 20,
@@ -313,10 +422,10 @@ TEAM_IMPERIAL = DarkRP.createJob("Queen ", {
     },
     command = "queen",
     max = 1,
-    salary = 800,
+    salary = 300,
     admin = 0,
     vote = true,
-    hasLicense = false,
+    hasLicense = true,
     category = "Imperials",
     canDemote = false,
     level = 12,
@@ -345,7 +454,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Prince", {
     salary = 150,
     admin = 0,
     vote = true,
-    hasLicense = false,
+    hasLicense = true,
     category = "Imperials",
     canDemote = false,
     level = 10,
@@ -381,7 +490,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Royal Guard", {
     salary = 1600,
     admin = 0,
     vote = false,
-    hasLicense = false,
+    hasLicense = true,
     category = "Imperials",
     canDemote = false,
     PlayerSpawn = function(ply)
@@ -422,7 +531,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Royal Mage", {
     salary = 1800,
     admin = 0,
     vote = false,
-    hasLicense = false,
+    hasLicense = true,
     category = "Imperials",
     canDemote = false,
     PlayerSpawn = function(ply)
@@ -456,7 +565,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Royal Knight", {
     salary = 2000,
     admin = 0,
     vote = false,
-    hasLicense = false,
+    hasLicense = true,
     category = "Imperials",
     canDemote = false,
     PlayerSpawn = function(ply)

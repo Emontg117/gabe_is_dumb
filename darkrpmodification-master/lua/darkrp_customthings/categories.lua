@@ -53,6 +53,16 @@ DarkRP.createCategory {
          return true 
     end,
 }
+DarkRP.createCategory {
+    name = "Guards",
+    categorises = "jobs",
+    startExpanded = false,
+    color = Color(51, 0, 255),
+    sortOrder = 2,
+    canSee = function(ply) 
+         return true 
+    end,
+}
 --[[
     Rebels - Category
     Generated using: DarkRP | Category Generator
