@@ -240,12 +240,8 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial Foot Soldier", {
     },
     description = [[Basic Level of the Imperial Military ]],
     weapons = {
-<<<<<<< HEAD
         "meleearts_blade_broadone",
         "weapon_mfrp_lantern"
-=======
-        "meleearts_blade_broadone"
->>>>>>> parent of 299f4de (Updated jobs.lua)
     },
     command = "imperialfootsoldier",
     max = 9,
