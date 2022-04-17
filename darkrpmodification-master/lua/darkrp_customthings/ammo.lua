@@ -80,7 +80,7 @@ DarkRP.createAmmoType("smg1", {
 
 Add new ammo types under the next line!
 ---------------------------------------------------------------------------]]
-DarkRP.createAmmoType("huntingbow_quiver", {
+DarkRP.createAmmoType("arrow", {
     name = "Quiver of Arrows",
     model = "models/weapons/w_quiver.mdl",
     price = 10,

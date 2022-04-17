@@ -278,7 +278,7 @@ TEAM_ASSASSIN = DarkRP.createJob("Assassin", {
     category = "Citizens",
     canDemote = true,
     ammo = {
-        ["huntingbow_quiver"] = 20,
+        ["arrow"] = 20,
     },
     PlayerSpawn = function(ply)
         ply:SetHealth(100)
@@ -311,7 +311,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial Archer", {
     category = "Imperials",
     canDemote = false,
     ammo = {
-        ["huntingbow_quiver"] = 20,
+        ["arrow"] = 20,
     },
     level = 3,
 })
