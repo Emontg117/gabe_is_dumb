@@ -226,8 +226,9 @@ TEAM_CITIZEN = DarkRP.createJob("Peasant", {
     hasLicense = false,
     candemote = false,
     category = "Citizens",
-       
-        --[[
+})     
+
+--[[
     Imperial Foot Soldier Job
     Generated using: DarkRP | Job Generator
     https://yourdevtools.com/gmod/darkrp-job
@@ -278,7 +279,7 @@ TEAM_ASSASSIN = DarkRP.createJob("Assassin", {
     category = "Citizens",
     canDemote = true,
     ammo = {
-        ["arrow"] = 20,
+        ["huntingbow_arrows"] = 20,
     },
     PlayerSpawn = function(ply)
         ply:SetHealth(100)
@@ -311,7 +312,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial Archer", {
     category = "Imperials",
     canDemote = false,
     ammo = {
-        ["arrow"] = 20,
+        ["huntingbow_arrows"] = 20,
     },
     level = 3,
 })
