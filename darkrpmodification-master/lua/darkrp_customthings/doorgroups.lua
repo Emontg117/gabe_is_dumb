@@ -17,5 +17,6 @@ AddDoorGroup("NAME OF THE GROUP HERE, you will see this when looking at a door",
     https://yourdevtools.com/gmod/darkrp-doorgroup
 --]]
 
-AddDoorGroup("Imperials", TEAM_IMPERIAL)
+AddDoorGroup("Imperials", TEAM_IMPERIAL, TEAM_KING)
 AddDoorGroup("Guards", TEAM_POLICE, TEAM_CHIEF, TEAM_MAYOR)
+AddDoorGroup("Rebels", TEAM_REBEL)
