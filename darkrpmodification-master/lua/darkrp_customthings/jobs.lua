@@ -240,7 +240,7 @@ TEAM_IMPERIAL = DarkRP.createJob("Imperial Foot Soldier", {
     },
     description = [[Basic Level of the Imperial Military ]],
     weapons = {
-        "meleearts_blade_broadone"
+        "meleearts_blade_broadone",
         "weapon_mfrp_lantern"
     },
     command = "imperialfootsoldier",
