@@ -93,4 +93,18 @@ DarkRP.createCategory {
          return true 
     end,
 }
-
+--[[
+    Printers - Category
+    Generated using: DarkRP | Category Generator
+    https://yourdevtools.com/gmod/darkrp-category
+--]]
+DarkRP.createCategory {
+    name = "Printers",
+    categorises = "entities",
+    startExpanded = true,
+    color = Color(0, 0, 0),
+    sortOrder = 2,
+    canSee = function(ply) 
+         return true 
+    end,
+}
